@@ -1,8 +1,9 @@
 import webbrowser
-
 import sys
 
+
 class menu:
+
 
     def eligeGato():
         print("GATOS BÁSICOS.")

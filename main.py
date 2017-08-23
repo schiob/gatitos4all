@@ -1,8 +1,9 @@
 import webbrowser
-
 import sys
 
+
 from menu import menu
+
 
 def main():
     a = menu.eligeGato()
