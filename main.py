@@ -12,14 +12,18 @@ import tweepy, time
 import sys
 import requests
 import os
+import configparser
 
 def twitter_api():
-	# Obtén tus propias credenciales del API de Twitter y ponlas aquí.
-	# https://apps.twitter.com/
-	CONSUMER_KEY = ""
-	CONSUMER_SECRET = ""
-	ACCESS_KEY = ""
-	ACCESS_SECRET = ""
+	# Se trae el archivo de configuración donde están las credenciales.
+	config = configparser.ConfigParser()
+	config.read("myconfig.cfg")
+	
+	#Utiliza las credenciales para accesar al API.
+	CONSUMER_KEY = config.get('credentials', 'consumerKey')
+	CONSUMER_SECRET = config.get('credentials','consumerSecret')
+	ACCESS_KEY = config.get('credentials', 'accessKey')
+	ACCESS_SECRET = config.get('credentials', 'accessSecret')
 	auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 	auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 	api = tweepy.API(auth)
