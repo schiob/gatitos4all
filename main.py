@@ -16,10 +16,10 @@ import os
 def twitter_api():
 	# Obtén tus propias credenciales del API de Twitter y ponlas aquí.
 	# https://apps.twitter.com/
-	CONSUMER_KEY = "hqrV6EXtuL6Z9FPwf0c1DlwuC"
-	CONSUMER_SECRET = "GxvSxlZWhBFZEBLzbtMirm4p4wzBh0Vtjzfbp9K5Fk74cz5rrl"
-	ACCESS_KEY = "1460750678-6TGzdLJBmnursszY57LLkA5sTXAXPYknXAYJm1I"
-	ACCESS_SECRET = "sG7tZvp9lRvuc7dxq5dbEpQu0Vec220RNVWR4tJTv211Z"
+	CONSUMER_KEY = ""
+	CONSUMER_SECRET = ""
+	ACCESS_KEY = ""
+	ACCESS_SECRET = ""
 	auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 	auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 	api = tweepy.API(auth)
